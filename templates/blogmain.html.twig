@@ -1,0 +1,25 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <div>
+    <h3>Recent Posts</h3>
+    {% for p in page.find('/blog').children.order('date', 'desc').slice(0, 5) %}
+        {% set bannerimage = p.media['banner.jpg'] %}
+        <div class="feature-full" style="background-color:rgba(0,0,0,.3);">
+            {% if bannerimage %}
+                <div>{{ bannerimage.cropZoom(60,60).quality(60) }}</div>
+            {% else %}
+                <div><img src="{{ url('theme://images/logo.png') }}" width="60" height="60"></div>
+            {% endif %}
+            <div class="recent-post-text">
+                <h2><a href="{{p.url}}">{{ p.title }}</a></h2>
+                <p>{{ p.date|date("M j, Y")}}</p>
+				<!-- need to remove images from summary() ???  ignore/remove  p.media??? -->
+				{{ p.summary(2000) }}<a href="{{p.url}}">Read More</a>
+				<br><hr>
+            </div>
+        </div><br clear="all">
+    {% endfor %}
+</div>
+	
+{% endblock %}

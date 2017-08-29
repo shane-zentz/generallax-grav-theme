@@ -1,0 +1,7 @@
+enabled: true
+dropdown:
+  enabled: true
+credits:
+  enabled: true
+footers:
+  enabled: true
