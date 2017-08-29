@@ -5,11 +5,11 @@ icon: star
 author:
   name: Shane Zentz
   email: shane@shanezentz.com
-homepage: https://github.com/shane-zentz/grav-theme-generallax
+homepage: https://github.com/shane-zentz/generallax-grav-theme
 demo: https://www.shanezentz.com
 keywords: Generallax, parallax, sliding banners, psuedo-parallax, mobile friendly, mobile-friendly, 
 bugs: https://github.com/shane-zentz/grav-theme-generallax/issues
-readme: https://github.com/shane-zentz/grav-theme-generallax/blob/develop/README.md
+readme: https://github.com/shane-zentz/generallax-grav-theme/blob/develop/README.md
 license: MIT
 
 form:
